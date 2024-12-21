@@ -43,3 +43,15 @@ app.*.map.json
 /android/app/debug
 /android/app/profile
 /android/app/release
+
+# Ignore Dart build files
+build/
+
+# Ignore Dart packages
+.packages
+.pub/
+.dart_tool/
+
+# Ignore IDE files
+.idea/
+.vscode/
