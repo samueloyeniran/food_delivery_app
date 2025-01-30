@@ -348,10 +348,16 @@ class Restaurant extends ChangeNotifier {
 
   // USER CART
 
-  final List<CartItem> _cart = [];
+  List<CartItem> _cart = [];
   // add to cart
-  void addToCart(Food food, List<Addon> selectedAddons, dynamic seletedAddons) {
+  void addToCart(
+    Food food,
+    List<Addon> selectedAddons,
+  ) {
     // to see if there is a food item already with same food and selected addon
+    print(food);
+    print(selectedAddons);
+
     CartItem? cartItem = _cart.firstWhereOrNull((item) {
       // check if the food item are the same
       bool isSameFood = item.food == food;
@@ -361,7 +367,7 @@ class Restaurant extends ChangeNotifier {
       return isSameFood && isSameAddons;
     });
     // if item already exists, increase it's quantity
-
+    print(_cart);
     if (cartItem != null) {
       cartItem.quantity++;
     }
@@ -369,13 +375,19 @@ class Restaurant extends ChangeNotifier {
     // otherwise, add a new cart item to the cart
 
     else {
+      print("wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww");
       _cart.add(
         CartItem(
           food: food,
-          seletedAddons: seletedAddons,
+          seletedAddons: selectedAddons,
         ),
       );
+      print('??????????????????????????????????????????');
+      print(_cart);
+      print("//////////////////////////////////////////////");
     }
+    print(_cart);
+    print(cart);
     notifyListeners();
   }
 

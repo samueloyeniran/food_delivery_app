@@ -39,9 +39,10 @@ class _MyFoodPageState extends State<MyFoodPage> {
     }
 
     // add to cart
-    context
-        .read<Restaurant>()
-        .addToCart(food, currentlySelectedAddons, selectedAddons);
+    context.read<Restaurant>().addToCart(
+          food,
+          currentlySelectedAddons,
+        );
   }
 
   @override
@@ -149,7 +150,9 @@ class _MyFoodPageState extends State<MyFoodPage> {
                   ),
                   MyButton(
                     onTap: () {
-                      return addToCart(widget.food, widget.selectedAddons);
+                      addToCart(widget.food, widget.selectedAddons);
+                      print("i am clicking this button");
+                      print(widget.selectedAddons);
                     },
                     text: "Add To Cart",
                   ),

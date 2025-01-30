@@ -14,6 +14,7 @@ class Cartpage extends StatelessWidget {
         // cart
 
         final userCart = restaurant.cart;
+        print("$userCart show cart item");
         // scaffold ui
 
         return Scaffold(
@@ -31,12 +32,11 @@ class Cartpage extends StatelessWidget {
                     itemBuilder: (context, index) {
                       // get individual cart item
                       final cartItem = userCart[index];
-                      return ListTile(
-                        title: Text(cartItem.food.name),
-                        subtitle:
-                            Text('\$${cartItem.food.price.toStringAsFixed(2)}'),
-                        trailing: Text('x${cartItem.quantity}'),
-                      );
+                      return Text(cartItem.food.imagePath);
+
+                      // return ListTile(
+                      //   title: Text(cartItem.food.name),
+                      // );
                     }),
               ),
             ],
