@@ -18,11 +18,11 @@ class Food {
 
 // ignore: camel_case_types
 enum foodCategory {
-  burgers,
-  salads,
-  sides,
-  desert,
-  drinks,
+  Burgers,
+  Salads,
+  Sides,
+  Desert,
+  Drinks,
 }
 
 class Addon {

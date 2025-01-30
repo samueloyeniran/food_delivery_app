@@ -1,4 +1,7 @@
+import 'package:collection/collection.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
+import 'package:food_delivery_app/models/cart_item.dart';
 import 'package:food_delivery_app/models/food.dart';
 
 class Restaurant extends ChangeNotifier {
@@ -8,9 +11,9 @@ class Restaurant extends ChangeNotifier {
       name: "classic cheeseBurger",
       description:
           "a juicy beef with melted cheese, tomato,lettuce, and a hint of onion pickle",
-      imagePath: "lib/assets/image1.png",
+      imagePath: "assets/images/burger1.png",
       price: 0.99,
-      category: foodCategory.burgers,
+      category: foodCategory.Burgers,
       availableAddon: [
         Addon(name: "extra cheese", price: 0.09),
         Addon(name: "Bacon", price: 2.09),
@@ -21,9 +24,9 @@ class Restaurant extends ChangeNotifier {
       name: "Ultimate Beef Bliss",
       description:
           "a juicy beef with melted cheese, tomato,lettuce, and a hint of onion pickle",
-      imagePath: "lib/assets/image1.png",
+      imagePath: "assets/images/burger2.png",
       price: 0.99,
-      category: foodCategory.burgers,
+      category: foodCategory.Burgers,
       availableAddon: [
         Addon(name: "extra cheese", price: 0.09),
         Addon(name: "Bacon", price: 2.09),
@@ -34,9 +37,9 @@ class Restaurant extends ChangeNotifier {
       name: "Cheesy Crunch Burger",
       description:
           "a juicy beef with melted cheese, tomato,lettuce, and a hint of onion pickle",
-      imagePath: "lib/assets/image1.png",
+      imagePath: "assets/images/burger3.png",
       price: 0.99,
-      category: foodCategory.burgers,
+      category: foodCategory.Burgers,
       availableAddon: [
         Addon(name: "extra cheese", price: 0.09),
         Addon(name: "Bacon", price: 2.09),
@@ -47,9 +50,9 @@ class Restaurant extends ChangeNotifier {
       name: "Smoky Bacon Classic",
       description:
           "a juicy beef with melted cheese, tomato,lettuce, and a hint of onion pickle",
-      imagePath: "lib/assets/image1.png",
+      imagePath: "assets/images/burger4.png",
       price: 0.99,
-      category: foodCategory.burgers,
+      category: foodCategory.Burgers,
       availableAddon: [
         Addon(name: "extra cheese", price: 0.09),
         Addon(name: "Bacon", price: 2.09),
@@ -60,9 +63,9 @@ class Restaurant extends ChangeNotifier {
       name: "Loaded BBQ Stack",
       description:
           "a juicy beef with melted cheese, tomato,lettuce, and a hint of onion pickle",
-      imagePath: "lib/assets/image1.png",
+      imagePath: "assets/images/burger5.png",
       price: 0.99,
-      category: foodCategory.burgers,
+      category: foodCategory.Burgers,
       availableAddon: [
         Addon(name: "extra cheese", price: 0.09),
         Addon(name: "Bacon", price: 2.09),
@@ -74,9 +77,9 @@ class Restaurant extends ChangeNotifier {
       name: "Greek Garden Salad",
       description:
           "a juicy beef with melted cheese, tomato,lettuce, and a hint of onion pickle",
-      imagePath: "lib/assets/image1.png",
+      imagePath: "assets/images/salad1.png",
       price: 0.99,
-      category: foodCategory.burgers,
+      category: foodCategory.Salads,
       availableAddon: [
         Addon(name: "extra cheese", price: 0.09),
         Addon(name: "Bacon", price: 2.09),
@@ -87,9 +90,9 @@ class Restaurant extends ChangeNotifier {
       name: "Tropical Fruit Medley",
       description:
           "a juicy beef with melted cheese, tomato,lettuce, and a hint of onion pickle",
-      imagePath: "lib/assets/image1.png",
+      imagePath: "assets/images/salad2.png",
       price: 0.99,
-      category: foodCategory.burgers,
+      category: foodCategory.Salads,
       availableAddon: [
         Addon(name: "extra cheese", price: 0.09),
         Addon(name: "Bacon", price: 2.09),
@@ -100,9 +103,9 @@ class Restaurant extends ChangeNotifier {
       name: "Caesar's Classic Bowl",
       description:
           "a juicy beef with melted cheese, tomato,lettuce, and a hint of onion pickle",
-      imagePath: "lib/assets/image1.png",
+      imagePath: "assets/images/salad3.png",
       price: 0.99,
-      category: foodCategory.burgers,
+      category: foodCategory.Salads,
       availableAddon: [
         Addon(name: "extra cheese", price: 0.09),
         Addon(name: "Bacon", price: 2.09),
@@ -113,9 +116,9 @@ class Restaurant extends ChangeNotifier {
       name: "Crunchy Veggie Delight",
       description:
           "a juicy beef with melted cheese, tomato,lettuce, and a hint of onion pickle",
-      imagePath: "lib/assets/image1.png",
+      imagePath: "assets/images/salad4.png",
       price: 0.99,
-      category: foodCategory.burgers,
+      category: foodCategory.Salads,
       availableAddon: [
         Addon(name: "extra cheese", price: 0.09),
         Addon(name: "Bacon", price: 2.09),
@@ -126,9 +129,9 @@ class Restaurant extends ChangeNotifier {
       name: "Avocado Spinach Bliss",
       description:
           "a juicy beef with melted cheese, tomato,lettuce, and a hint of onion pickle",
-      imagePath: "lib/assets/image1.png",
+      imagePath: "assets/images/salad4.png",
       price: 0.99,
-      category: foodCategory.burgers,
+      category: foodCategory.Salads,
       availableAddon: [
         Addon(name: "extra cheese", price: 0.09),
         Addon(name: "Bacon", price: 2.09),
@@ -140,9 +143,9 @@ class Restaurant extends ChangeNotifier {
       name: "Crispy Fries",
       description:
           "a juicy beef with melted cheese, tomato,lettuce, and a hint of onion pickle",
-      imagePath: "lib/assets/image1.png",
+      imagePath: "assets/images/side1.png",
       price: 0.99,
-      category: foodCategory.burgers,
+      category: foodCategory.Sides,
       availableAddon: [
         Addon(name: "extra cheese", price: 0.09),
         Addon(name: "Bacon", price: 2.09),
@@ -153,9 +156,9 @@ class Restaurant extends ChangeNotifier {
       name: "Garlic Parmesan Wings",
       description:
           "a juicy beef with melted cheese, tomato,lettuce, and a hint of onion pickle",
-      imagePath: "lib/assets/image1.png",
+      imagePath: "assets/images/side2.png",
       price: 0.99,
-      category: foodCategory.burgers,
+      category: foodCategory.Sides,
       availableAddon: [
         Addon(name: "extra cheese", price: 0.09),
         Addon(name: "Bacon", price: 2.09),
@@ -166,9 +169,9 @@ class Restaurant extends ChangeNotifier {
       name: "Sweet Potato Wedges",
       description:
           "a juicy beef with melted cheese, tomato,lettuce, and a hint of onion pickle",
-      imagePath: "lib/assets/image1.png",
+      imagePath: "assets/images/side3.png",
       price: 0.99,
-      category: foodCategory.burgers,
+      category: foodCategory.Sides,
       availableAddon: [
         Addon(name: "extra cheese", price: 0.09),
         Addon(name: "Bacon", price: 2.09),
@@ -179,9 +182,9 @@ class Restaurant extends ChangeNotifier {
       name: "Cheesy Nachos",
       description:
           "a juicy beef with melted cheese, tomato,lettuce, and a hint of onion pickle",
-      imagePath: "lib/assets/image1.png",
+      imagePath: "assets/images/side4.png",
       price: 0.99,
-      category: foodCategory.burgers,
+      category: foodCategory.Sides,
       availableAddon: [
         Addon(name: "extra cheese", price: 0.09),
         Addon(name: "Bacon", price: 2.09),
@@ -192,9 +195,9 @@ class Restaurant extends ChangeNotifier {
       name: "Spicy Onion Rings",
       description:
           "a juicy beef with melted cheese, tomato,lettuce, and a hint of onion pickle",
-      imagePath: "lib/assets/image1.png",
+      imagePath: "assets/images/side5.png",
       price: 0.99,
-      category: foodCategory.burgers,
+      category: foodCategory.Sides,
       availableAddon: [
         Addon(name: "extra cheese", price: 0.09),
         Addon(name: "Bacon", price: 2.09),
@@ -206,9 +209,9 @@ class Restaurant extends ChangeNotifier {
       name: "Chocolate Lava Cake",
       description:
           "a juicy beef with melted cheese, tomato,lettuce, and a hint of onion pickle",
-      imagePath: "lib/assets/image1.png",
+      imagePath: "assets/images/burger1.png",
       price: 0.99,
-      category: foodCategory.burgers,
+      category: foodCategory.Desert,
       availableAddon: [
         Addon(name: "extra cheese", price: 0.09),
         Addon(name: "Bacon", price: 2.09),
@@ -219,9 +222,9 @@ class Restaurant extends ChangeNotifier {
       name: "Vanilla Berry Sundae",
       description:
           "a juicy beef with melted cheese, tomato,lettuce, and a hint of onion pickle",
-      imagePath: "lib/assets/image1.png",
+      imagePath: "assets/images/burger1.png",
       price: 0.99,
-      category: foodCategory.burgers,
+      category: foodCategory.Desert,
       availableAddon: [
         Addon(name: "extra cheese", price: 0.09),
         Addon(name: "Bacon", price: 2.09),
@@ -232,9 +235,9 @@ class Restaurant extends ChangeNotifier {
       name: "Caramel Fudge Brownie",
       description:
           "a juicy beef with melted cheese, tomato,lettuce, and a hint of onion pickle",
-      imagePath: "lib/assets/image1.png",
+      imagePath: "assets/images/burger1.png",
       price: 0.99,
-      category: foodCategory.burgers,
+      category: foodCategory.Desert,
       availableAddon: [
         Addon(name: "extra cheese", price: 0.09),
         Addon(name: "Bacon", price: 2.09),
@@ -245,9 +248,9 @@ class Restaurant extends ChangeNotifier {
       name: "Strawberry Cheesecake",
       description:
           "a juicy beef with melted cheese, tomato,lettuce, and a hint of onion pickle",
-      imagePath: "lib/assets/image1.png",
+      imagePath: "assets/images/burger1.png",
       price: 0.99,
-      category: foodCategory.burgers,
+      category: foodCategory.Desert,
       availableAddon: [
         Addon(name: "extra cheese", price: 0.09),
         Addon(name: "Bacon", price: 2.09),
@@ -258,9 +261,9 @@ class Restaurant extends ChangeNotifier {
       name: "Mint Choco Delight",
       description:
           "a juicy beef with melted cheese, tomato,lettuce, and a hint of onion pickle",
-      imagePath: "lib/assets/image1.png",
+      imagePath: "assets/images/burger1.png",
       price: 0.99,
-      category: foodCategory.burgers,
+      category: foodCategory.Desert,
       availableAddon: [
         Addon(name: "extra cheese", price: 0.09),
         Addon(name: "Bacon", price: 2.09),
@@ -272,9 +275,9 @@ class Restaurant extends ChangeNotifier {
       name: "Classic Lemonade",
       description:
           "a juicy beef with melted cheese, tomato,lettuce, and a hint of onion pickle",
-      imagePath: "lib/assets/image1.png",
+      imagePath: "assets/images/drink1.png",
       price: 0.99,
-      category: foodCategory.burgers,
+      category: foodCategory.Drinks,
       availableAddon: [
         Addon(name: "extra cheese", price: 0.09),
         Addon(name: "Bacon", price: 2.09),
@@ -285,9 +288,9 @@ class Restaurant extends ChangeNotifier {
       name: "Berry Blast Smoothie",
       description:
           "a juicy beef with melted cheese, tomato,lettuce, and a hint of onion pickle",
-      imagePath: "lib/assets/image1.png",
+      imagePath: "assets/images/drink2.png",
       price: 0.99,
-      category: foodCategory.burgers,
+      category: foodCategory.Drinks,
       availableAddon: [
         Addon(name: "extra cheese", price: 0.09),
         Addon(name: "Bacon", price: 2.09),
@@ -298,9 +301,9 @@ class Restaurant extends ChangeNotifier {
       name: "Mango Mint Cooler",
       description:
           "a juicy beef with melted cheese, tomato,lettuce, and a hint of onion pickle",
-      imagePath: "lib/assets/image1.png",
+      imagePath: "assets/images/drink3.png",
       price: 0.99,
-      category: foodCategory.burgers,
+      category: foodCategory.Drinks,
       availableAddon: [
         Addon(name: "extra cheese", price: 0.09),
         Addon(name: "Bacon", price: 2.09),
@@ -311,9 +314,9 @@ class Restaurant extends ChangeNotifier {
       name: "Iced Mocha Delight",
       description:
           "a juicy beef with melted cheese, tomato,lettuce, and a hint of onion pickle",
-      imagePath: "lib/assets/image1.png",
+      imagePath: "assets/images/drink4.png",
       price: 0.99,
-      category: foodCategory.burgers,
+      category: foodCategory.Drinks,
       availableAddon: [
         Addon(name: "extra cheese", price: 0.09),
         Addon(name: "Bacon", price: 2.09),
@@ -324,9 +327,9 @@ class Restaurant extends ChangeNotifier {
       name: "Tropical Punch",
       description:
           "a juicy beef with melted cheese, tomato,lettuce, and a hint of onion pickle",
-      imagePath: "lib/assets/image1.png",
+      imagePath: "assets/images/drink5.png",
       price: 0.99,
-      category: foodCategory.burgers,
+      category: foodCategory.Drinks,
       availableAddon: [
         Addon(name: "extra cheese", price: 0.09),
         Addon(name: "Bacon", price: 2.09),
@@ -339,21 +342,87 @@ class Restaurant extends ChangeNotifier {
 */
 
   List<Food> get menu => _menu;
+  List<CartItem> get cart => _cart;
 
-  /*
-  O P E R A T I O N S
+  //O P E R A T I O N S
 
-  // add to cart 
+  // USER CART
 
-  // remove from cart 
+  final List<CartItem> _cart = [];
+  // add to cart
+  void addToCart(Food food, List<Addon> selectedAddons, dynamic seletedAddons) {
+    // to see if there is a food item already with same food and selected addon
+    CartItem? cartItem = _cart.firstWhereOrNull((item) {
+      // check if the food item are the same
+      bool isSameFood = item.food == food;
+// check if the list of selected addons are the same
+      bool isSameAddons =
+          const ListEquality().equals(item.seletedAddons, selectedAddons);
+      return isSameFood && isSameAddons;
+    });
+    // if item already exists, increase it's quantity
 
-  // get the total number of item in the cart 
+    if (cartItem != null) {
+      cartItem.quantity++;
+    }
 
-  // get the total price of item in the cart 
+    // otherwise, add a new cart item to the cart
+
+    else {
+      _cart.add(
+        CartItem(
+          food: food,
+          seletedAddons: seletedAddons,
+        ),
+      );
+    }
+    notifyListeners();
+  }
+
+  // remove from cart
+  void removeFronCart(CartItem cartItem) {
+    int cartIndex = _cart.indexOf(cartItem);
+
+    if (cartIndex != -1) {
+      if (_cart[cartIndex].quantity > 1) {
+        _cart[cartIndex].quantity--;
+      } else {
+        _cart.removeAt(cartIndex);
+      }
+    }
+    notifyListeners();
+  }
+
+  // get the total number of item in the cart
+  double getTotalPrice() {
+    double total = 0.0;
+    for (CartItem cartItem in _cart) {
+      double itemTotal = cartItem.food.price;
+
+      for (Addon addon in cartItem.seletedAddons) {
+        itemTotal += addon.price;
+      }
+      total += itemTotal * cartItem.quantity;
+    }
+    return total;
+  }
+
+  // get the total price of item in the cart
+
+  int getTotalItemCount() {
+    int totalItemCount = 0;
+
+    for (CartItem cartItem in _cart) {
+      totalItemCount += cartItem.quantity;
+    }
+    return totalItemCount;
+  }
 
   // clear the cart
-
-  */
+  void clearCart() {
+    _cart.clear();
+    notifyListeners();
+  }
 
   /*
    

@@ -36,6 +36,7 @@ dependencies:
   cupertino_icons: ^1.0.8
   provider: ^6.1.2
   get: ^4.6.6
+  collection: ^1.19.0
 
 dev_dependencies:
   flutter_test:
@@ -61,8 +62,31 @@ flutter:
 
   # To add assets to your application, add an assets section, like this:
   assets:
-  #   - images/a_dot_burr.jpeg
-      - assets/
+  
+      - assets/images/burger1.png
+      - assets/images/burger2.png
+      - assets/images/burger3.png
+      - assets/images/burger4.png
+      - assets/images/burger5.png
+      - assets/images/side1.png
+      - assets/images/side2.png
+      - assets/images/side3.png
+      - assets/images/side4.png
+      - assets/images/side5.png
+      - assets/images/salad1.png
+      - assets/images/salad2.png
+      - assets/images/salad3.png
+      - assets/images/salad4.png
+      - assets/images/salad4.png
+      - assets/images/drink1.png
+      - assets/images/drink2.png
+      - assets/images/drink3.png
+      - assets/images/drink4.png
+      - assets/images/drink5.png
+      
+      
+      
+     
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/to/resolution-aware-images
