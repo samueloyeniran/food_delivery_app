@@ -5,7 +5,8 @@ import 'package:food_delivery_app/components/my_drawer.dart';
 import 'package:food_delivery_app/components/my_sliver_appbar.dart';
 import 'package:food_delivery_app/components/my_tab_bar.dart';
 import 'package:food_delivery_app/models/food.dart';
-// ignore: unused_import
+import 'package:food_delivery_app/models/restaurant.dart';
+
 import 'package:provider/provider.dart';
 
 class HomePage extends StatefulWidget {
@@ -32,6 +33,26 @@ class _HomePageState extends State<HomePage>
     super.dispose();
   }
 
+  List<Food> _filterMenuByCategory(foodCategory category, List<Food> fullMenu) {
+    return fullMenu.where((food) => food.category == category).toList();
+  }
+
+  List<Widget> getFoodThisCategory(List<Food> fullMenu) {
+    return foodCategory.values.map(
+      (category) {
+        List<Food> categoryMenu = _filterMenuByCategory(category, fullMenu);
+        return ListView.builder(
+          itemCount: categoryMenu.length,
+          itemBuilder: (context, index) {
+            return ListTile(
+              title: Text(categoryMenu[index].name),
+            );
+          },
+        );
+      },
+    ).toList();
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -41,7 +62,7 @@ class _HomePageState extends State<HomePage>
       //   title: Text("HOME"),
       //   centerTitle: true,
       // ),
-      drawer: MyDrawer(),
+      drawer: MyDrawer(), 
       body: NestedScrollView(
         headerSliverBuilder: (context, i) => [
           MySliverAppbar(
@@ -66,35 +87,12 @@ class _HomePageState extends State<HomePage>
             ),
           ),
         ],
-        body: TabBarView(
-          controller: _tabController,
-          children: [
-            ListView.builder(
-                itemCount: 10,
-                itemBuilder: (context, index) {
-                  return Text("Hello");
-                }),
-            ListView.builder(
-                itemCount: 10,
-                itemBuilder: (context, index) {
-                  return Text("coding");
-                }),
-            ListView.builder(
-                itemCount: 10,
-                itemBuilder: (context, index) {
-                  return Text("testing");
-                }),
-            ListView.builder(
-                itemCount: 10,
-                itemBuilder: (context, index) {
-                  return Text("coocking");
-                }),
-            ListView.builder(
-                itemCount: 10,
-                itemBuilder: (context, index) {
-                  return Text("drinking");
-                }),
-          ],
+        body: Consumer<Restaurant>(
+          // ignore: avoid_types_as_parameter_names
+          builder: (context, Restaurant, child) => TabBarView(
+            controller: _tabController,
+            children: getFoodThisCategory(Restaurant.menu),
+          ),
         ),
       ),
     );

@@ -16,6 +16,7 @@ class Food {
   });
 }
 
+// ignore: camel_case_types
 enum foodCategory {
   burgers,
   salads,
