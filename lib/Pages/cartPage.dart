@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:food_delivery_app/models/cart_item.dart';
+import 'package:food_delivery_app/components/my_cart_tile.dart';
 import 'package:food_delivery_app/models/restaurant.dart';
-import 'package:get/get.dart';
 import 'package:provider/provider.dart';
 
 class Cartpage extends StatelessWidget {
@@ -32,11 +31,7 @@ class Cartpage extends StatelessWidget {
                     itemBuilder: (context, index) {
                       // get individual cart item
                       final cartItem = userCart[index];
-                      return Text(cartItem.food.imagePath);
-
-                      // return ListTile(
-                      //   title: Text(cartItem.food.name),
-                      // );
+                      return MyCartTile(cartItem: cartItem);
                     }),
               ),
             ],

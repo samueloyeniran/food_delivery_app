@@ -348,7 +348,7 @@ class Restaurant extends ChangeNotifier {
 
   // USER CART
 
-  List<CartItem> _cart = [];
+  final List<CartItem> _cart = [];
   // add to cart
   void addToCart(
     Food food,
@@ -392,7 +392,7 @@ class Restaurant extends ChangeNotifier {
   }
 
   // remove from cart
-  void removeFronCart(CartItem cartItem) {
+  void removeFromCart(CartItem cartItem) {
     int cartIndex = _cart.indexOf(cartItem);
 
     if (cartIndex != -1) {

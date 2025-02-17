@@ -78,7 +78,7 @@ class _MyFoodPageState extends State<MyFoodPage> {
                       ),
                       // food price
                       Text(
-                        "\$" + widget.food.price.toString(),
+                        "\$${widget.food.price}",
                         style: TextStyle(
                           fontWeight: FontWeight.bold,
                           fontSize: 16,
