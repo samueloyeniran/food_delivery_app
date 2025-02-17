@@ -36,7 +36,7 @@ class MyCartTile extends StatelessWidget {
                       // food namme
                       Text(cartItem.food.name),
                       // food price
-                      Text("\$" + cartItem.food.price.toString()),
+                      Text("\$${cartItem.food.price}"),
                     ],
                   ),
                   MyQuantitySelector(
